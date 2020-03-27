@@ -1,0 +1,30 @@
+## CH 11: Metal Casting
+# 2/6/20
+
+# Other Expendable Mold Casting (Not Sand)
+*Shell mold casting*
+-thin layer of adhered and cured sand formed around a master.
+-two shell haves are assembled with metal shot used as support.
+*vacuum molding*
+-vacuum used instead of chemical binder to mechanically stabilize the mold
+*expanded polystyrene*
+-sand packed around polystyrene foam pattern that vaporizes
+-useful for complicated molds
+-pattern is wasted in every casting
+-environmental concerns with vaporizing polystyrene
+*investment casting or lost wax*
+-wax pattern created
+-plaster formed around pattern
+-wax melted away
+-metal cast into plaster
+
+# Permanent Mold Casting
+Econmically advantageous: save molds, casting is more rapid
+Disadvantage: molds are very expensive
+Typically uses metals with low melting points -> no steel
+-aluminum, zinc, mangesium
+Good dimensional control + surface finish
+part geometry more limited due to clamshell mold
+Die casting: High pressure molting material injected into mold
+
+# Casting defects

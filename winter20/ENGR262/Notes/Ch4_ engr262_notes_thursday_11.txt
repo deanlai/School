@@ -1,0 +1,101 @@
+##ENGR262 notes
+##Thursday 1/16/20
+
+##Chapter 4: Physical properties of materials
+##Part 1: Density/Thermal
+ex. Important for machining as it effects mechanical properties of material and cutting tools --> Most machining operations benefit from cooling.
+
+###Volumetric Properties
+Density = weight/unit volume
+typ. g/cm^3 (lb/in^3)
+determined by atomic #, atomic radius, packing
+
+strength to weight ratio: *tensile* strength/density
+-useful for aerospace applications
+
+Coefficient of thermal expansion (CTE)
+-change in length/degree of temperature (mm/mm/C)
+-length easier to measure than volume
+L_2 - L_1 = alpha*L_1(T_2 - T_1)
+-*important*: set T_2, L_2 to hotter or longer material.
+-strong materials have smaller CTEs in general.
+-used in shrink fit and expansion fit assemblies
+-part is heated or cooled to fit with another part --> tight fit after cooling
+-thermal expansion can be a problem in welding due to stresses
+-in casting mold size must be larger than part size due to shrink
+
+###Melting Properties
+T_m temperature at which it transforms from solid to liquid state
+-reverse transformation is called freezing point
+**Heat of fusion** = heat energy required at T_m to transform from solid to liquid
+
+Alloys have two melting temperatures called liquidus and solidus.
+-liquidus: temp when first material metls
+-solidus: temp when alloy solidifies
+
+Glasses/amorphous materials have a glass-transition temp
+GTT is a visco-elasti
+c state in between solid and liquid state
+-glasses/amorphous materials are molded when in visco-elastic state
+
+metal casting - metals with lower melting points are generally easier to cast
+plastic molding - melting characteristics of polys important for nearly all polymer processes
+sintering of powdered metals - 
+
+###Thermal Properties
+specific heat: quant of energy req. to raise temp of unit mass by one degree
+**H = CW(T_2 - T_1)**
+H = heat, C = specific heat, W = weight, T_2 - T_1 = change in temp
+
+thermal conductivity (k)
+capability of a material to transfer heat *through itself*
+-generally high for metals (free electrons), low in cermaics/polymers
+-units for k: J/s mm C
+-mechanism is phonon transfer
+
+For manufacturing:
+-heat trating, sintering metals/ceramics
+-generated in cold forming/machining
+-needed for casting, injection molding, vacuum thermoforming, hot forging, etc.
+
+##Part 2: Electric/Electrochemical properties
+###Mass Diffusion
+Process of atoms of one material diffusing into another material
+Diffusion highest at interface
+substitutional vs. interstitial diffusion
+used to dope silicon
+Surface hardening based on diffusion -> carburizing and nitriding
+-diffusion welding: used to join two components by pressing together and allowing diffusion accross bounary to create bond
+-used in electronics to alter surface chemistry of semiconductor wafer in very localized regions to create circuits
+
+###Electrical Properties
+flow of current involves charge carriers
+-electrical conductivity can change by 30 orders of magnitude in materials
+-in solids charge carriers are e-
+-in liquids charge carriers are pos/neg ions
+Ohm's law: V = IR
+*Resistance vs. Resistivity*
+Resistance in a uniform section depends on L, A and reistivity r.
+R = r(L/A) (Ohm*m)
+conductivity = 1/r (1/Ohm*m)
+resistivity changes with temperature:
+-metals: resistivity increases with temperature
+-semiconductors: resistivity decreases with temperature
+in semicondutor industry: doped silicon tends to have constant resistivity over usage case temperature range.
+-metals are best *conductors* due to metallic bonding
+-ceramics/polymers are poor conductors due to covalent/ionic bonding
+-ceramics/polys used as insulators due to high resistivity
+semiconductors have resistivities between insulators and conductors
+-silicon is most common due to abundance and ease of manufacture
+-unique because their properties can be changed by doping
+*Important for...*
+EDM machining uses electrical energy to spark and remove materials
+Arc welding uses electrical energy to melt materials
+
+###Electrochecmical Properties
+Electrochemisty: relationship between electricity and chemical changes and conversion of energies
+electrolysis: anode -> pos bias, cathode -> neg bias
+ex: decomposition of water
+oppoosite of electrolysis is plating
+electrochemical machining used to remove material from part surface
+production of hydrogen and oxygen gases produced via electrolysis

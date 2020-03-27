@@ -1,0 +1,11 @@
+Instance of the following were suppressed or opened from new location when this file was opened
+
+File	Message	Response	
+C:\Users\Lamb\Downloads\Assembly_5_18\couplingDefinition.SLDPRT	Unable to locate the file	
+C:\Users\alanb\Desktop\Assembly_5_18\compositeLapRing.SLDPRT	Unable to locate the file	
+
+
+The following messages were automatically dismissed when this file was opened
+
+moduleRing_flat.SLDPRT	One or more features in this part are based on other documents. If those documents have changed, they should be opened now to properly update this part.	Open any documents which have changed
+

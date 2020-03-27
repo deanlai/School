@@ -1,0 +1,19 @@
+Subject: A briefing on my (limited) knowledge of technical writing.
+
+What follows is a short overview of my knowledge and experience with technical writing, and my understanding of what characterizes good technical writing. As peddler intellectual honesty and humility, it should be noted that I do not really know what I am talking about. Yet.
+
+It has been nearly 12 years since I have had to write any sort of long form essay; I am surely out of practice. That said, I have in the interim written countless work emails, with varying amounts of mostly minimal formality. I have also written some job duty and expectation guides, which while serious and comprehensive, also did not shy away from humor or non-critical content.
+
+It is my understanding that technical writing entails writing clean, succinct text for the purposes of providing useful documentation or other information that the readers can utilize to learn, perform, create, or otherwise. In contrast to many other forms of writing, technical writing is most often read by those who need to read it, and not necessarily by those who want to read it, and should therefore focus on communicating and explaining relevant information directly and without clutter. Sentences that merely flavor the text should largely be avoided, this sentence being a prime example, among others in this particular document.
+
+Technical writing should take care to be precise and concise. A good technical report should say exactly what it intends to say, and little to nothing else. Boring, you say? Boring can be tolerated, but frustration is searching through erroneous text to find the information you are looking for.
+
+For many reports or documents, only small excerpts or sections will be viewed at a time or by a particular individual. Many documents must therefore take care that their different sections can function independently, without  merely implicit references to other areas of the document. A particular section of an instruction manual, for instance, should not assume knowledge of other sections when describing how to perform an operation or duty.
+
+Writing is important in any field, really, and technical wiriting will certainly be important as an aerospace engineer at NASA should I ever end up there. It is the language with which we would communicate to our superiors and underlings. It is the tool we would use to document progress to assist both ourselves and those who may follow us on projects after we are gone. It is relatively well-known among the NASA-knowledgeable that much of the collective engineering knowledge of the Apollo programs has been lost to time as it largely existed in the personal workplace notes of the engineers. Let's not forget how to go to space again.
+
+Here is what I know: Technical writing could perhaps be single most important generalized skill for my career as an engineer. It probably will not be the reason someone hires me, but writing is used in every aspect of an engineering job, from documentation, to proposals, to requests, delegating, to asking for a raise, and certainly more I do not yet know about. As an employer, you expect your engineers to be able to do calculus, but the one's who can also add company value with their writing are, I imagine, huge assets.
+
+But like I said, I do not actually know what I am talking about.
+
+-Sean

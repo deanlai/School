@@ -1,0 +1,353 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ME213 L Lab 1
+% Sean Lai
+%(10/23/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{geometry}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{tabularx}
+ 
+%\setlength{\parskip}{1em}
+ 
+\geometry{letterpaper, portrait, margin=1.25in}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Uniaxial Tensile Testing \\ ME213L, Section 008}
+\author{Sean Lai} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+\begin{tabular}{l r}
+Date Performed: & October 25, 2019 \\ % Date the experiment was performed
+
+Instructor: & Sam Weber % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%-------------------------------------------------------------------
+%	SECTION 1
+
+\section{Introduction}
+
+Tensile tests are a useful method for determining properties of various materials. In this lab, a tensile testing machine is used to produce stress-strain plots for 3 different materials: 1018 CR steel, 6064-T3 aluminum, and polystyrene.
+
+
+%-------------------------------------------------------------------
+% SECTION 2
+
+\section{Procedures}
+
+The testing apparatus is used to slowly strain a sample material until fracture, sampling the load and strain throughout the test to produce a plot. the The sample materials are fabricated from sheet stock into dumbbell-shaped test pieces. The dumbbell shape promotes necking and fracture near the center of the sample.
+\vspace{1em}
+
+For each sample, neck width and thickness measurements are taken with a digital caliper before and after the test. Each sample is also marked with a 1" gauge before the test, and the gauge is measured again after the test to determine elongation (plastic deformation).
+
+\section{Experimental Data}
+
+Table 1 below has the experimental data for the 3 materials, $W$ is sample width, and $T$ is sample thickness.
+
+\begin{table}[h]
+  \begin{center}
+    \caption{Experimental Tensile Test Data}
+    \label{tab:table1}
+    \vspace{.25em}
+    \begin{tabularx}{450pt}{|*{4}{>{\centering\arraybackslash}X}|} \hline
+       & \textit{Steel} & \textit{Aluminum} & \textit{Polystyrene} \\ \hline
+       \textit{$W \times T$} & 6.47 $\times$ 1.09 \si{mm}& 6.33 $\times$ 1.29 \si{mm} & 6.36 $\times$ 3.00 \si{mm} \\ \hline
+       \textit{$W \times T$ (neck)} & 3.58 $\times$ 0.63 \si{mm} & 5.86 $\times$ 1.10 \si{mm} & 6.35 $\times$ 2.99 \si{mm} \\ \hline
+       \textit{Cross-section} & 7.05 \si{mm^2} & 8.17 \si{mm^2} & 19.10 \si{mm^2} \\ \hline
+       \textit{Cross-section (neck)} & 2.26 \si{mm^2} & 6.45 \si{mm^2} & 19.00 \si{mm^2} \\ \hline
+       \textit{Load Range} & & & \\ \hline
+       \textit{Yield Point Load} & 1570 & 2550 & 345 \\ \hline
+       \textit{Ultimate Load} & 2260 \si{N} & 3710 \si{N} & 352 \si{N} \\ \hline
+       \textit{Breaking Load} & 1410 \si{N} & 3350 \si{N} & 304 \si{N} \\ \hline
+       \textit{Elongation} & 0.465 in & 0.120 in & 0.086 in\\ \hline
+    \end{tabularx}
+  \end{center}
+\end{table}
+
+\pagebreak
+
+The experimental data had small errors near the beginning of the test causing the testing software to create an inaccurate 0.2\% offset line. Using the .csv data collected from the testing device, new 0.2\% offset lines were created using the following method.
+
+\begin{enumerate}
+	\item 0.2\% of the total elongation is found using the minimum and maximum  values of position in the data set. Call this $\epsilon_2$ for the 0.2\% shift.
+	\item A line is plotted by using two points from the elastic deformation region of the dat. Call this $E$. The x-intercept and slope of $E$ are recorded.
+	\item A new line is plotted using the slope of $E$ and offset from the x-intercept of $E$ by $\epsilon_2$. Call this new line $E_2$.
+	\item Find the intercept of $E_2$ with the Load/Position curve to find the yield stress $\sigma_y$.
+\end{enumerate}
+
+For the graph sets below, the first graph is the full data set to show the complete stress/strain relation. The second graph is a zoomed in snapshot of the elastic portion of the first graph, with $\sigma_y$ as a dotted horizontal line, and $E_2$ plotted as a solid line.
+
+\begin{center}
+\begin{figure}
+\begin{center}
+    \caption{1018 CR steel}
+    \label{tab:graph1}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {Position (\si{mm})},
+			ylabel = {Load (\si{N})},
+			black,
+			xmin = 0,
+			ymin = 0,
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_steel_reduced_eng.csv};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+	\caption{steel with 0.2\% offset and $\sigma_y$}
+	\label{tab:graph2}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {Position (\si{mm})},
+			ylabel = {Load (\si{N})},
+			black,
+			xmin = 0,
+			ymin = 0,
+			xmax = 1.2,
+			ymax = 2000,
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_steel_reduced_eng.csv};
+			%\addplot+[black, no marks]
+			%{(1090-160)/(.50184-.119)*(x-.07)};
+			\addplot+[black, no marks]
+			{(1090-160)/(.50184-.119)*(x-.07-.0262)};
+			\addplot+[dotted, no marks]
+			{1350};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+\end{center}
+
+%$\epsilon_2 = 13.1 \si{mm} \times 0.002 = 0.026 \si{mm}$
+
+%$\sigma_y = 1570 \si{N}$
+\begin{center}
+\begin{figure}
+\begin{center}
+    \caption{6061-T4 aluminum}
+    \label{tab:graph3}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {Position (\si{mm})},
+			ylabel = {Load (\si{N})},
+			black,
+			xmin = 0,
+			ymin = 0,
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_Al_reduced_eng.csv};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+	\caption{aluminum with 0.2\% offset and $\sigma_y$}
+	\label{tab:graph4}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {Position (\si{mm})},
+			ylabel = {Load (\si{N})},
+			black,
+			xmin = 0,
+			ymin = 0,
+			xmax = 2,
+			ymax = 3000,
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_Al_reduced_eng.csv};
+			%\addplot+[black, no marks]
+			%{(2150-142)/(1.1111-.1201)*(x-.05)};
+			\addplot+[black, no marks]
+			{(2150-142)/(1.1111-.1201)*(x-.05-.012)};
+			\addplot+[dotted, no marks]
+			{2200};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+\end{center}
+
+%$\epsilon_2 = 6 \si{mm} \times 0.002 = 0.012 \si{mm}$
+
+%$\sigma_y = 2550 \si{N}$
+
+\begin{center}
+\begin{figure}
+\begin{center}
+    \caption{Polystyrene}
+    \label{tab:graph5}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {Position (\si{mm})},
+			ylabel = {Load (\si{N})},
+			black,
+			xmin = 0,
+			ymin = 0,
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_plastic_reduced_eng.csv};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+	\caption{polystyrene with 0.2\% offset and $\sigma_y$}
+	\label{tab:graph6}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {Position (\si{mm})},
+			ylabel = {Load (\si{N})},
+			black,
+			xmin = 0,
+			ymin = 0,
+			xmax = 1.2,
+			ymax = 400,
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_plastic_reduced_eng.csv};
+			%\addplot+[black, no marks]
+			%{(288-137)/(.62-.315)*(x-.04)};
+			\addplot+[black, no marks]
+			{(288-137)/(.62-.315)*(x-.04-.018)};
+			\addplot+[dotted, no marks]
+			{345};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+\end{center}
+
+%$\epsilon_2 = 9 \si{mm} \times 0.002 = 0.018 \si{mm}$
+
+%$\sigma_y = 335 \si{N}$
+
+\pagebreak
+
+\section{Data Analysis}
+\begin{table}[h]
+  \begin{center}
+    \caption{Experimental Tensile Test Data}
+    \label{tab:table2}
+    \vspace{.25em}
+    \begin{tabularx}{450pt}{|*{4}{>{\centering\arraybackslash}X}|} \hline
+       & \textit{Steel} & \textit{Aluminum} & \textit{Polystyrene} \\ \hline
+       \textit{$W \times T$} & 6.47 $\times$ 1.09 \si{mm}& 6.33 $\times$ 1.29 \si{mm} & 6.36 $\times$ 3.00 \si{mm} \\ \hline
+       \textit{$W \times T$ (neck)} & 3.58 $\times$ 0.63 \si{mm} & 5.86 $\times$ 1.10 \si{mm} & 6.35 $\times$ 2.99 \si{mm} \\ \hline
+       \textit{Cross-section} & 7.05 \si{mm^2} & 8.17 \si{mm^2} & 19.10 \si{mm^2} \\ \hline
+       \textit{Cross-section (neck)} & 2.26 \si{mm^2} & 6.45 \si{mm^2} & 19.00 \si{mm^2} \\ \hline
+       \textit{Load Range} & & & \\ \hline
+       \textit{Yield Point Load} & 1570 & 2550 & 345 \\ \hline
+       \textit{Ultimate Load} & 2260 \si{N} & 3710 \si{N} & 352 \si{N} \\ \hline
+       \textit{Breaking Load} & 1410 \si{N} & 3350 \si{N} & 304 \si{N} \\ \hline
+       \textit{Elongation} & 0.465 in & 0.120 in & 0.086 in\\ \hline
+    \end{tabularx}
+  \end{center}
+\end{table}
+
+\begin{figure}
+\begin{center}
+	\caption{Aluminum True Stress/Strain}
+	\label{tab:graph4}
+	\begin{tikzpicture}
+				\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {True Strain $\epsilon_T$},
+			ylabel = {True Stress $\sigma_T$},
+			black,
+			xmin = 0,
+			ymin = 0,
+			xtick={0,0.04,0.08,0.12,0.16},
+			domain = 0:14,
+			range = 0:2500,
+			]
+			\addplot+[only marks, mark size = .5pt, black]
+			table[x=Position (mm), y=Force (N),col sep=comma] {section8_group1_Al_reduced_true.csv};
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\subsection*{Questions}
+\begin{enumerate}
+\item There is both elastic deformation and plastic deformation present during the tensile test for all three materials, with the polystyrene showing some interesting differences when compared with the two metal samples. The elastic region is the section of the curve before the yield point and the plastic region is after the yield point.
+
+\item Only one sample of polystyrene was tested at one strain rate, so it is not possible to compare how different strain rates effect the stress/strain curve for the material. The polystyrene did however have some very interesting behavior in response to strain compared with the steel and aluminum samples. In figure 5 above, you can see that the stress in the polystyrene sample reduces by about 12\% immediately after reaching the yield stress. After elongating a further 0.25\si{mm} the stress began to increase again until fracture due to work hardening.
+
+\item The stress strain curve for a brittle material will reach yield stress before fracturing with only a little more added strain.
+\end{enumerate}
+
+\end{document}

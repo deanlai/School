@@ -1,0 +1,46 @@
+###Metals
+##alloys and phase digrams
+*metals* the most important engineering materials
+-satisfy wide variety of design reqs
+-processes developed and refined over many years
+-easily predicted properties
+Properties:
+-high stiffness and strength
+-good toughness
+-
+Processes:
+-cast
+wrought: shaped after cast
+powdered: sintered
+Types:
+Ferrous: contains iron
+nonferrous: does not contain iron
+Pure metals: used for high conductivity applications
+alloys: have enhanced mechanical properties
+-increased strength, hardness
+*Alloys*
+mixture of two or more elements
+solid solutions:
+-substitutional (brass/bronze) vs. interstitial (steel)
+intermediate phases form with diffient solubilities of alloy components
+-could be metallic compounds:
+-or intermetallic
+85% of metal tonnage
+mostly steel or cast iron
+Steel: carbon between 0.1%-2.1%
+Cast Iron: 2.1%-4/5% carbon
+higher -> wrought iron
+Ferrite: mostly iron
+Cementite: high carbon phase
+##steel making process
+Iron:
+-electrolytic iron: very pure
+-ingot iron: 0.1% impure
+-worught iton: higher impurities
+iron making: ore -> pig iron
+steel making: pig iron -> steel
+
+##nonferrous metals
+
+
+##superalloys

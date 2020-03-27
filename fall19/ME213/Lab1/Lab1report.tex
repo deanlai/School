@@ -1,0 +1,249 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ME213 L Lab 1
+% Sean Lai
+%(10/23/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{geometry}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{datavisualization.formats.functions}
+
+\usepackage[version=3]{mhchem} % Package for chemical equation typesetting
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
+\usepackage{graphicx} % Required for the inclusion of images
+\usepackage{natbib} % Required to change bibliography style to APA
+\usepackage{amsmath} % Required for some math elements
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+ 
+%\setlength{\parskip}{1em}
+ 
+\geometry{letterpaper, portrait, margin=1.25in}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Hardness Testing \\ To Brinell or not to Brinell? That is the question. \\ ME213L, Section 008}
+\author{Sean Lai} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+\begin{tabular}{l r}
+Date Performed: & October 19, 2019 \\ % Date the experiment was performed
+
+Instructor: & Sam Weber % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+% \begin{abstract}
+% Abstract text
+% \end{abstract}
+
+%-------------------------------------------------------------------
+%	SECTION 1
+
+\section{Introduction}
+
+Materials of various compositions and structure have varying degrees of hardness. Hardness is a basic quantity that can give us some insight into the strength and toughness of a material, though the test is not sufficient to determine these mechanical properties on it's own. In this lab the Brinell and Rockwell hardness scales are used to measure the hardness of three grades of steel bolts, and of an aluminum block.
+
+
+%-------------------------------------------------------------------
+% SECTION 2
+
+\section{Procedures}
+
+The Brinell and Rockwell hardness scales measure plastic deformation of a material under a known load. By comparing different materials and different testing equipment to each other, we can have a better understanding of the hardness of the tested materials.
+
+\subsection{Brinell Hardness}
+\label{Brinell Hardness}
+The brinell hardness test deforms the sample material with a 10\si{mm} steel ball by applying a load of 3000\si{kg}. For hard materials a tungsten 10\si{mm} carbide ball can be used, and for soft metals a force of 500\si{kg} can be used. The diameter of the resulting indentation is then measured with two measurements taken at right angles across the indentation and averaged. The Brinell hardness number is obtained by dividing the force applied, by the surface area of the resulting indentation:
+\begin{center}
+\begin{equation}\label{eq:1}
+    BHN = \frac{F}{\frac{\pi D}{2}(D-\sqrt{D^2-d^2})}
+\end{equation}
+\end{center}
+where $d$ is the measured diameter of the indentation, and $D$ is the diameter of the steel ball. For our experiment we used an aluminum plate as our material sample with the Brinell hardness tester.
+
+
+\subsection{Rockwell Hardness}
+The Rockwell hardness test is faster and less destructive than the Brinell test, and is related to the depth of an indentation made by a small penetrator. A minor load is applied to set the penetrator, followed by a major load to create the indentation. When the load is released the difference in depth between the major and minor loads relates to the hardness rating read on the testing machine. For softer materials the Rockwell B scale is used, a $\frac{1}{16}$" steel ball is used with a 100\si{kg} major load, and for harder materials a diamond spheroconical penetrator is used with a 150\si{kg} major load. For our experiment, we used 3 grades of steel bolts (grade 2, grade 5, and grade 8) as our material samples for the Rockwell hardness testing machines.
+ 
+ 
+%-------------------------------------------------------------------
+%	SECTION 3
+
+\section{Experimental Data}
+\subsection{Rockwell Hardness Tests}
+The Rockwell C scale was used to test grade 5 and grade 8 steel bolts, and the Rockwell B scale was used to test grade 2, grade 5, and grade 8 steel bolts. For each test three trials were performed and their average readings calculated. See Table 1.
+
+\begin{table}[h]
+  \begin{center}
+    \caption{Rockwell Hardness Tests}
+    \label{tab:table1}
+    \vspace{.5em}
+    \begin{tabular}{c|c|c|c|c|c} 
+      \textbf{Material} & \textbf{Trial} & \textbf{Rockwell} & \textbf{Minor} & \textbf{Major} & \textbf{Hardness}\\
+      \textbf{(Steel)} & & \textbf{Scale} & \textbf{Load (\si{kg})} & \textbf{Load (\si{kg})} & \textbf{Reading}\\
+      \hline
+      grade 5 & 1 & C & 10 & 150 & 23 \\
+      grade 5 & 2 & C & 10 & 150 & 29 \\
+      grade 5 & 3 & C & 10 & 150 & 28.2 \\
+      \hline
+      grade 8 & 1 & C & 10 & 100 & 33.2 \\
+      grade 8 & 2 & C & 10 & 100 & 32.8 \\
+      grade 8 & 3 & C & 10 & 100 & 32.0 \\
+      \hline
+      grade 2 & 1 & B & 10 & 100 & 68 \\
+      grade 2 & 2 & B & 10 & 100 & 69 \\
+      grade 2 & 3 & B & 10 & 100 & 69 \\
+      \hline
+      grade 5 & 1 & B & 10 & 100 & 72 \\
+      grade 5 & 2 & B & 10 & 100 & 72 \\
+      grade 5 & 3 & B & 10 & 100 & 71 \\
+      \hline
+      grade 8 & 1 & B & 10 & 100 & 75 \\
+      grade 8 & 2 & B & 10 & 100 & 74.5 \\
+      grade 8 & 3 & B & 10 & 100 & 74.5 \\
+      \hline
+      
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\subsection{Brinell Hardness Test}
+The Brinell hardness test was used to test a block of aluminum. As with the Rockwell tests, three trials were performed. The average diameter is measured in two orthogonal directions, and the hardness calculated from the diameter. See Table 2.
+
+\begin{table}[h]
+  \begin{center}
+    \caption{Brinell Hardness Tests}
+    \label{tab:table2}
+    \vspace{.5em}
+    \begin{tabular}{c|c|c|c|c|c} 
+      \textbf{Material} & \textbf{Trial} & \textbf{Load} &
+      \textbf{Indentation} & \textbf{Brinell} & $L/\pi(\frac{d}{2})^2$\\
+      & & \textbf{(\si{kg})} & \textbf{Diameter (\si{mm})} & \textbf{Hardness} & \\
+      \hline
+      Aluminum & 1 & 3000 & 5.1 & 137 & 146.8\\
+      Aluminum & 2 & 3000 & 5.0 & 143 & 152.8\\
+      Aluminum & 3 & 3000 & 5.0 & 143 & 152.8\\
+      \hline
+      
+    \end{tabular}
+  \end{center}
+\end{table}
+
+\section{Data Analysis}
+\subsection{Questions}
+\textit{1}. Table 3 below shows the materials tested and their hardness ratings from hardest to softest after conversion to the Brinell hardness scale from the Rockwell B and C scales. After researching typical hardness values for different steel grades, I decided to use the Rockwell C scale conversion for the harder steels, and the Rockwell B scale for the softer steel as these are the scales that those grades of steel are commonly expressed in. For Table 3, bold-face values are measured values, and non-bold-face values are converted.
+
+\begin{table}[h]
+  \begin{center}
+    \caption{Hardness of sample materials compared}
+    \label{tab:table3}
+    \vspace{.5em}
+    \begin{tabular}{c|c|c|c|c|c} 
+      \textbf{Material} & \textbf{Brinell} & \textbf{Brinell} & \textbf{Brinell} & \textbf{Rockwell B} & \textbf{Rockwell C}\\
+      & \textbf{(measured)}& \textbf{(from HRB)} & \textbf{(from HRC)} & &\\
+      \hline
+      Grade 8 steel & --- & 135 & 308 & \textbf{74.65} & \textbf{32.7}\\
+      Grade 5 steel & --- & 127 & 262 & \textbf{71.7} & \textbf{26.7}\\
+      Aluminum & \textbf{141} & --- & --- & --- & ---\\
+      Grade 2 steel & --- & 116 & --- & \textbf{68.7} & ---\\
+      \hline
+      
+    \end{tabular}
+  \end{center}
+\end{table}
+\textit{2}. Question 2 was skipped for this lab.
+
+\vspace{1em}
+\textit{3}. Shown below are two equations, the Brinell Hardness formula, $force/surface\:area$ (1), and $load/projected\:area$ (2). For comparing these equations, we'll let $L = F$, as they are representing the same quantity.
+\begin{center}
+	\begin{multicols}{2}
+		\begin{equation}
+		\frac{F}{\frac{\pi D}{2}(D-\sqrt{D^2-d^2})} \tag{\ref{eq:1}}
+		\end{equation}\break
+		\begin{equation}
+		\frac{L}{\pi(\frac{d}{2})^2}
+		\end{equation}
+	\end{multicols}
+\end{center}
+\vspace{1em}
+Because surface area of a sphere increases faster than cross sectional area, and those quantities are in the denominator of equations (1) and (2) respectively, we can see that as $d \rightarrow D$, equation (1) approaches $2F/\pi D^2$ and equation (2) approaches $4F/\pi D^2$, or $eq.(2) = 2\cdot eq.(1)$. So, for very soft materials where the sphere is close to fully indenting the sample, equation (2) will give hardness values that twice as large as equation (1) will. For materials where $d$ is small compared to $D$, equation (2) is a fairly good approximation for Brinell hardness as seen in the plot below.
+\vspace{2em}
+\begin{center}
+	\begin{tikzpicture}
+		\begin{axis} [
+			height = 8cm,
+			width = 12cm,
+			xlabel = {$d$, Indentation Diameter (\si{mm})},
+			ylabel = {Brinell Hardness},
+			xmin = 1,
+			xmax = 10,
+			ymin = 0,
+			ymax = 400,	
+			domain = .5:10,
+			range = 0:350,
+			no marks,
+			black,
+			legend pos=outer north east,
+			]
+			\addplot+[black]
+			{3000/((pi*10/2)*(10-sqrt(100-x^2)))};
+			\addlegendentry{Brinell Hardness}
+			\addplot+[black, dotted]
+			{3000/(pi*(x/2)^2)};
+			\addlegendentry{$force/projected\:area$}
+		\end{axis}
+	\end{tikzpicture}
+\end{center}
+
+\textit{4}. 
+The aluminum sample has a face-centered-cubic crystal structure, and the steel samples have a predominantly body-centered-cubic structure. FCC structures have close-packed slip planes that allow for easier deformation of the material when compared with a BCC crystal structure. This correlates with our experimental results showing the steel samples (generally) have higher hardness readings than the aluminum sample. Between the grades of steel, the steel with lower carbon content (grade 2) is softer than the steels with higher carbon content (grades 5 and 8), since the carbon further limits the propagation of dislocations within the material and makes steel more difficult to deform.
+
+\vspace{2em}
+\textit{5}.
+As you can in Table 3 above, the Brinell values converted from the Rockwell B scale are much lower than the converted values from the Rockwell A scale for the same materials. In fact, the Brinell hardness for grade 8 steel converted from the measured reading in the Rockwell B scale is \textit{lower} than the measured Brinell hardness of the aluminum sample. This discrepancy can be attributed to the Rockwell B scale being intended for use on softer metals such as brass and aluminum, rather than hardened steel like the grade 8 bolts used in the experiment.
+
+\vspace{2em}
+\textit{6}.
+Although tensile tests are more accurate, a hardness test is (1) easier and faster to perform, (2) much less destructive than a tensile test, (3) doesn't require a sample with specific known geometry and can in theory be performed on an arbitrarily shaped part. During the engineering design phase, a tensile test may be more appropriate because it gives a more accurate measure of the strength of a material, though you could certainly perform both. For quality control, hardness tests would be preferable because they don't destroy  the sample being tested, and can be performed quickly on finished parts.
+
+\section{Conclusion}
+
+Hardness tests give us an easy way to measure some analog to the strength of a material, but they are not complete enough to account for all relevant factors. These tests are fast to perform and relatively non-destructive, especially in the case of the Rockwell test, which makes these tests useful for quality control in industry applications.
+
+\vspace{.5em}
+It is important that the appropriate test is used for materials of different strengths. As seen in question 5, the Rockwell B scale fails to accurately measure the hardness of hardened steels like that of the grade 8 bolts used in the experiment. While comparisons between the different testing methods can be made, you cannot make accurate direct conversions between values of different tests. The Brinell and Rockwell tests measure/relate different quantities, surface area of deformation in the case of the Brinell test, and depth of deformation for the Rockwell test. Different Rockwell tests also use penetrators made of different materials with different geometries and so cannot be directly converted into each other.
+
+\vspace{3em}
+The experimental data recordings can be found on the data sheets following this page
+
+
+
+
+\end{document}

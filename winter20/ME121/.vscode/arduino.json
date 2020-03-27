@@ -1,0 +1,6 @@
+{
+    "programmer": "AVRISP mkII",
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "sketch": "ME121-Fishtank\\Fishtank_code\\sensor_reading_lcd\\sensor_reading_lcd.ino"
+}

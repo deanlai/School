@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ME120, HW4, P2
+% Nightlight
+% Sean Lai
+%(10/29/19)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{verbatim}
+\usepackage{sectsty}
+\usepackage{graphicx}
+
+% Page Setup
+\geometry{letterpaper, portrait, margin=1.25in}
+\pagenumbering{gobble}
+
+
+\begin{document}
+\section*{Problem 2 code}
+\begin{verbatim}
+// -----------------------------------------------------------------------
+// ME120, Section 001
+// Homework 4, Problem 2
+// Sean Lai
+// 10/29/19
+//
+// Nightlight:
+// Uses a potentiometer to set the light level reading from a photoresistor
+// at which a nightlight turns on or off.
+// -----------------------------------------------------------------------
+
+// Setup sensor and output pins
+const int potPin = A0;
+const int photoPin = A1;
+const int LEDPin = 9;
+
+// declare variables for reading and calibration
+int photoVal, potVal;
+
+void setup() {
+  // Setup LED output pin
+  pinMode(LEDPin, OUTPUT);
+
+  // Setup Serial communications for debugging
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Take readings from photoresistor and potentiometer
+  photoVal = analogRead(photoPin);
+  potVal = analogRead(potPin);
+
+  // Test if light reading is less than
+  if(photoVal < potVal) {
+    digitalWrite(LEDPin, HIGH); // Turn LED on
+  }
+  // Otherwise turn it off
+  else {
+    digitalWrite(LEDPin, LOW);
+
+  }
+}
+\end{verbatim}
+
+\newpage
+\section*{Problem 3 code}
+\begin{verbatim}
+//---------------------------------------------------------------------
+// ME120, Section 001
+// Homework 4, Problem 3
+// Sean Lai
+// 10/29/19
+//
+// Step Ramp Analog Scaling:
+// Converts an analog input into a step ramp function
+//---------------------------------------------------------------------
+
+// Declare constants
+const int xmin = 0, x1 = 400, x2 = 800, xmax = 1023;
+const float y1 = 10.0, y2 = 20.0;
+
+// Delcare pins
+int potPin = A0;
+
+void setup() {
+  // Setup serial communications
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Declare variables and slope of ramp
+  int potReading;
+  float y, slope = (y2-y1)/(x2-x1);
+
+  // Read input from potentiometer
+  potReading = analogRead(potPin);
+
+  // Logic for step ramp function
+  if (potReading >= xmin && potReading < x1) {
+    y = y1;
+  }
+  else if (potReading >= x1 && potReading < x2){
+    y = y1 + slope*(potReading-x1);
+  }
+  else if (potReading >= x2 && potReading <= xmax) {
+    y = y2;
+  }
+  else { Serial.println("Error: potReading outside of expected range"); }
+
+  // Print to serial monitor
+  Serial.print(potReading);
+  Serial.print("   ");
+  Serial.println(y);
+}
+
+\end{verbatim}
+
+\pagebreak
+\begin{center}
+\section*{Problem 1 Circuit Photo}
+\includegraphics[scale=.08]{p2.jpg}
+\section*{Problem 2 Circuit Photo}
+\includegraphics[scale=.08]{p3.jpg}
+\section*{Problem 3 Serial Monitor}
+\includegraphics[scale=.7]{p3serialmonitorcapture.png}
+\end{center}
+\end{document}

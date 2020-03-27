@@ -1,0 +1,53 @@
+#ENGR262 Notes
+###Thursday 1/16
+##Chapter 5: Dimensions Tolerance and Surface
+
+##Dimensions and Tolerance
+Dimensions: linear or angular sizes of components
+Tolerance: allowed variation
+Dimension-> the size the deisgner wants
+tolerance-> amount you can go outside of spec
+-defines upper and lower limit
+-higher tolerance increases cost of manufacturing
+-Bilateral/Unilateral tolerance
+-limit dimensions
+*Measurment*: comparing unknown value to a standard
+accuracy: degree to which measurment agrees with true value
+precision: degree of repeatability of measurment
+##Instruments and Gauges
+Gage blocks: standards against which other measurements are compared
+graduated measures: rules/calipers
+not graduated: gage blocks, others.
+Dial indicators: used to measure roundness or runoff
+electronic gages: used transducers to convert linear displacement to electrical signal
+In recent years microprocessor tech has made electrical gages replace many conventional gages
+GO/NO-GO gages: checks if parts are in tolerance spec.
+-uses a small and large dimension to check parts
+Angles: protractors
+
+##Surfaces
+Nominal surface: surface designer intended defined by engineering drawing
+Actual surface: determined by manufacturing processes
+Variety of processes produce variation in surface
+-Aesthetic
+-safety
+-friction/wear
+-mechanical/physical properties
+-assembly
+-smooth surfaces make better electric contacts
+*Surface Technology*
+Texture: topography + geometric features
+-waviness and scratches
+roughness: fine variations determined by processed that formed surface
+waviness: vibration/delfection, etc.
+Lay: how to orient surface texture
+surface roughness: measurable variations
+surface finish: qualitative characteristics
+R_a, average roughness is the intergral of surface height over a length
+*measurement of surfaces-->
+subjective: fingernail test
+stylus electronic instruments
+optical instruments
+*tolerances in manufacturing processess*
+-most machining accurate to +_0.05mm or better
+-sand casting generally inaccurate with tolerance 10x to 20x greater than machined parts
