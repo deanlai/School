@@ -1,1 +1,11 @@
-HW#1: Ch1. # 6, 14, 15, 31, 32
+HW#1: Ch1. # 6, 14, 15, 31, 32 due: 4/10
+HW#2: Ch2. # 3, 7, 26, 35, 40, 41
+HW#3: Ch3. # 7, 12, 27, 29, 51, 61
+HW#4: Ch4. # 15, 17, 26, 30, 34, 41, 52, 53, 56
+HW#5: Ch4. # 58, 62, 72ab*, 74, 78, 82, 93
+   *72a do LTspice only.  Do one simulation for an ideal V meter, then another for a V meter with    resistance specified.  You do not need to submit your LTspice file, just record your findings
+   *72b compare the 2 results using % error
+HW#6: Ch5. # 1, 6, 14, 15, 42, 48
+HW#7: Ch6. # 19, 23, 25, 28, 31, 39
+HW#8: Ch7. # 3, 52, 75
+
