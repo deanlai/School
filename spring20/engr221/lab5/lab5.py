@@ -3,6 +3,7 @@
 
 import math
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Declare constants
 VS = 10
@@ -22,7 +23,7 @@ PL = []
 # loop through values of RL
 for i in range(len(RL)):
     # Solve for VA, VB
-    # matrix A found using NVA for points A and B
+    # matrices found using NVA for points A and B
     A = np.array([[1/R2 + 1/R1 + 1/RL[i], -1/RL[i]],
                   [-1/RL[i], 1/R4 + 1/R3 + 1/RL[i]]])
     B = np.array([VS/R1, VS/R3])
@@ -35,6 +36,7 @@ print("**************** Part A Results ******************")
 for i in range(len(RL)):
     print(f"For RL = {RL[i]},  VAB = {VAB[i]}, PL = {PL[i]}")
 
+
 # **************** Part B ******************
 # Calculate Rth and Vth using Thevenin equivalents 
 Rth = ((1/R1 + 1/R2)**-1 + (1/R3 + 1/R4)**-1)
@@ -42,8 +44,9 @@ Rth = ((1/R1 + 1/R2)**-1 + (1/R3 + 1/R4)**-1)
 VA = VS*(R2/(R1 + R2))
 VB = VS*(R4/(R3 + R4))
 Vth = VA-VB
+
 # Print results
-print("**************** Part B Results ******************")
+print("\n**************** Part B Results ******************")
 print(f"Rth = {Rth}, Vth = {Vth}")
 
 
@@ -58,6 +61,6 @@ for i in range(len(RL)):
     PLth.append(VABth[i]**2/RL[i]*1e6)
 
 # Print results
-print("**************** Part C Results ******************")
+print("\n**************** Part C Results ******************")
 for i in range(len(RL)):
     print(f"For RL = {RL[i]},  VABth = {VAB[i]}, PLth = {PL[i]}")
