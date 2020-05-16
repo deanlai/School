@@ -63,3 +63,6 @@ for i in range(len(RL)):
 print("\n**************** Part C Results ******************")
 for i in range(len(RL)):
     print(f"For RL = {RL[i]},  VABth = {VAB[i]}, PLth = {PL[i]}")
+
+print("\nCheck to see if power at RL = Rth is larger than other values")
+print(f"For RL = Rth = {Rth}, VAB = {Vth/2}, Pth = {(Vth/2)**2/Rth*1e6}")
