@@ -3,7 +3,6 @@
 
 import math
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Declare constants
 VS = 10
@@ -38,7 +37,7 @@ for i in range(len(RL)):
 
 
 # **************** Part B ******************
-# Calculate Rth and Vth using Thevenin equivalents 
+# Calculate Rth and Vth using Thevenin equivalents
 Rth = ((1/R1 + 1/R2)**-1 + (1/R3 + 1/R4)**-1)
 # Calculate VA, VB using voltage dividers at A, B
 VA = VS*(R2/(R1 + R2))
