@@ -33,8 +33,8 @@ for i in range(len(RL)):
 # Print results
 print("**************** Part A Results ******************")
 for i in range(len(RL)):
-    print(f"For RL = {RL[i]},  VAB = {VAB[i]}, PL = {PL[i]}")
-
+    print(f"For RL = {RL[i]:.3f} ohms,  VAB = {VAB[i]:.3f} V, PL = {PL[i]:.3f} "
+          f"uW")
 
 # **************** Part B ******************
 # Calculate Rth and Vth using Thevenin equivalents
@@ -46,7 +46,7 @@ Vth = VA-VB
 
 # Print results
 print("\n**************** Part B Results ******************")
-print(f"Rth = {Rth}, Vth = {Vth}")
+print(f"Rth = {Rth:.3f} ohms, Vth = {Vth:.3f} V")
 
 
 # **************** Part C ******************
@@ -62,7 +62,9 @@ for i in range(len(RL)):
 # Print results
 print("\n**************** Part C Results ******************")
 for i in range(len(RL)):
-    print(f"For RL = {RL[i]},  VABth = {VAB[i]}, PLth = {PL[i]}")
+    print(f"For RL = {RL[i]:.3f} ohms,  VABth = {VAB[i]:.3f} V, PLth = "
+          f"{PL[i]:.3f} uW")
 
 print("\nCheck to see if power at RL = Rth is larger than other values")
-print(f"For RL = Rth = {Rth}, VAB = {Vth/2}, Pth = {(Vth/2)**2/Rth*1e6}")
+print(f"For RL = Rth = {Rth:.3f} ohms, VAB = {Vth/2:.3f} V, Pth = "
+      f"{(Vth/2)**2/Rth*1e6:.3f} uW")
